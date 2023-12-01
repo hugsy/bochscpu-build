@@ -54,7 +54,6 @@ jobs:
         sh .conf.cpu
         make || true
         cd ../..
-        ls -alR
         mkdir lib
         cp --verbose Bochs/bochs/cpu/libcpu.a lib/
         cp --verbose Bochs/bochs/cpu/fpu/libfpu.a lib/

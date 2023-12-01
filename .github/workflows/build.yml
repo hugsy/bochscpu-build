@@ -55,10 +55,10 @@ jobs:
         make || true
         cd ../..
         mkdir lib
-        cp --verbose Bochs/bochs/cpu/libcpu.a lib/
-        cp --verbose Bochs/bochs/cpu/fpu/libfpu.a lib/
-        cp --verbose Bochs/bochs/cpu/avx/libavx.a lib/
-        cp --verbose Bochs/bochs/cpu/cpudb/libcpudb.a lib/
+        cp -v Bochs/bochs/cpu/libcpu.a lib/
+        cp -v Bochs/bochs/cpu/fpu/libfpu.a lib/
+        cp -v Bochs/bochs/cpu/avx/libavx.a lib/
+        cp -v Bochs/bochs/cpu/cpudb/libcpudb.a lib/
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v3

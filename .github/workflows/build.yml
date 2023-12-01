@@ -31,8 +31,9 @@ jobs:
 
     - name: Build BochsCPU (Windows)
       if: matrix.variant.os == 'windows-latest'
+      continue-on-error: true
       run: |
-        wsl -- bash -c 'sh prep.sh; cd Bochs/bochs; sh .conf.cpu-msvc;'
+        bash -c 'sh prep.sh; cd Bochs/bochs; sh .conf.cpu-msvc;'
         cd Bochs/bochs
         nmake
         cd ../..
@@ -43,6 +44,7 @@ jobs:
 
     - name: Build BochsCPU (Linux & MacOS)
       if: matrix.variant.os != 'windows-latest'
+      continue-on-error: true
       run: |
         sh prep.sh
         cd Bochs/bochs

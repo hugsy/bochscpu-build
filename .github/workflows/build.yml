@@ -49,7 +49,7 @@ jobs:
       run: |
         bash -c 'sh prep.sh; cd Bochs/bochs; sh .conf.cpu-msvc;'
         cd Bochs/bochs
-        Start-Process nmake -ErrorAction SilentlyContinue
+        Start-Process nmake -ErrorAction SilentlyContinue -PassThru -Wait
         cd ../..
         mkdir lib
         cp -Verbose Bochs/bochs/cpu/libcpu.a lib/cpu.a

@@ -24,7 +24,7 @@ jobs:
     name: ${{ matrix.variant.os }} / ${{ matrix.variant.arch }}
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4.1.4
 
     - name: Initialization (Windows)
       if: matrix.variant.os == 'windows-latest'
@@ -78,7 +78,7 @@ jobs:
         mv bochs ../artifact/
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4.3.3
       with:
         name: bochscpu-build-${{ matrix.variant.os }}-${{ matrix.variant.arch }}
         path: artifact

@@ -13,6 +13,7 @@ set echo
   --enable-handlers-chaining \
   --enable-cpu-level=6 \
   --enable-x86-64 \
+  --enable-fpu \
   --enable-avx \
   --enable-evex \
   --enable-vmx=2 \
@@ -21,7 +22,6 @@ set echo
   --enable-show-ips \
   --enable-smp \
   --enable-configurable-msrs \
-  --disable-disasm \
   --with-win32 --with-nogui \
   ${CONFIGURE_ARGS}
 

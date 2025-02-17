@@ -13,6 +13,7 @@ set echo
   --enable-handlers-chaining \
   --enable-cpu-level=6 \
   --enable-x86-64 \
+  --enable-cet \
   --enable-fpu \
   --enable-avx \
   --enable-evex \

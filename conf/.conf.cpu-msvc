@@ -8,6 +8,7 @@ set echo
 # NOTE: repeat-speedups breaks linear access hooks
 ./configure \
   --target=x86_64-pc-windows \
+  --enable-static-link \
   --disable-repeat-speedups \
   --enable-fast-function-calls \
   --enable-handlers-chaining \
